@@ -9,7 +9,7 @@ namespace woorkito
 		public MainPage()
 		{
 			Children.Add(buildNavigationPage(new RegisterPage(), "Register", "register.png"));
-			Children.Add(buildNavigationPage(new ReportPage(), "Report", "report.png"));
+			Children.Add(buildNavigationPage(new ReportPage(), "Reports", "reports.png"));
 			Children.Add(buildNavigationPage(new SettingsPage(), "Settings", "settings.png"));
 		}
 
@@ -17,7 +17,7 @@ namespace woorkito
 		{
 			var navigationPage = new NavigationPage(page);
 			navigationPage.Title = title;
-			//navigationPage.Icon = iconPath;
+			navigationPage.Icon = iconPath;
 			return navigationPage;
 		}
 	}
