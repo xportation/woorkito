@@ -1,9 +1,9 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "woorkito", "woorkito.csproj", "{C7D6BF5F-FAE1-4A15-91FA-5DABF80356B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Woorkito", "woorkito.csproj", "{C7D6BF5F-FAE1-4A15-91FA-5DABF80356B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "woorkito.iOS", "iOS\woorkito.iOS.csproj", "{BB7A4227-FDB1-40F9-9EF4-1C5E5702F97D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Woorkito.iOS", "iOS\woorkito.iOS.csproj", "{BB7A4227-FDB1-40F9-9EF4-1C5E5702F97D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

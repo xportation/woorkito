@@ -4,8 +4,45 @@
 		x:Class="woorkito.RegisterPage" 
 		Title="Register">
 	<ContentPage.Content>
-		<StackLayout>
-			<Label Text="Register Page" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Label>
-		</StackLayout>
+		<Grid>
+<!--			<StackLayout Grid.Row="0"></StackLayout>-->
+			<StackLayout Grid.Row="0">
+				<Grid>
+					<StackLayout Grid.Row="1">
+						<Label Text="Date" FontSize="18" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+						<Label Text="Time" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center">
+							<Label.FontFamily>
+							    <OnPlatform x:TypeArguments="x:String">
+							        <OnPlatform.Android>monospace</OnPlatform.Android>
+							        <OnPlatform.iOS>Menlo-Regular</OnPlatform.iOS>
+							    </OnPlatform>
+							</Label.FontFamily>
+						</Label>
+					</StackLayout>
+					<StackLayout Grid.Row="2">
+						<Button Text="Register" FontSize="32" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" 
+							Clicked="Register_Clicked"/>
+					</StackLayout>
+				</Grid>
+			</StackLayout>
+			<StackLayout Grid.Row="1" Padding="0,10,0,0">
+				<ListView x:Name="listView" ItemSelected="OnItemSelected" SeparatorVisibility="None" RowHeight="24">
+					<ListView.ItemTemplate>
+						<DataTemplate>
+							<ViewCell>
+								<Label Text="{Binding .}" VerticalTextAlignment="Center" FontSize="Medium" HorizontalTextAlignment="Center">
+									<Label.FontFamily>
+									    <OnPlatform x:TypeArguments="x:String">
+									        <OnPlatform.Android>monospace</OnPlatform.Android>
+									        <OnPlatform.iOS>Menlo-Regular</OnPlatform.iOS>
+									    </OnPlatform>
+									</Label.FontFamily>
+								</Label>
+							</ViewCell>
+						</DataTemplate>
+					</ListView.ItemTemplate>
+				</ListView>
+			</StackLayout>
+		</Grid>
 	</ContentPage.Content>
 </ContentPage>
