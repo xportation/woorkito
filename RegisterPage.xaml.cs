@@ -1,5 +1,8 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Globalization;
+using Realms;
 using Xamarin.Forms;
 
 namespace woorkito
@@ -12,7 +15,7 @@ namespace woorkito
 		{
 			InitializeComponent();
 
-			dayHours = new ObservableCollection<string> { "07:55", "11:59", "14:02" };
+			dayHours = new ObservableCollection<string>();
 
 			listView.SetBinding(ListView.ItemsSourceProperty, new Binding("."));
 			listView.BindingContext = dayHours;
@@ -20,7 +23,14 @@ namespace woorkito
 
 		void Register_Clicked(object sender, System.EventArgs e)
 		{
-			//throw new NotImplementedException();
+			//TODO: Should be injected
+			var realm = Realm.GetInstance();
+			realm.Write(() =>
+			{
+				var register = realm.CreateObject<TimeRegister>();
+				register.Time = DateTimeOffset.Now;
+				dayHours.Add(register.Time.ToLocalTime().ToString("t"));
+			});
 		}
 
 		async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
