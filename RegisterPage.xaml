@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:woorkito;assembly=woorkito"
 		x:Class="woorkito.RegisterPage" 
 		Title="Register">
 	<ContentPage.Content>
@@ -9,8 +10,12 @@
 			<StackLayout Grid.Row="0">
 				<Grid>
 					<StackLayout Grid.Row="1">
-						<Label Text="Date" FontSize="18" HorizontalOptions="Center" VerticalOptions="Center"></Label>
-						<Label Text="Time" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center">
+						<Label Text="{Binding DateTime, StringFormat='{0:d}'}" FontSize="18" 
+								HorizontalOptions="Center" 
+								VerticalOptions="Center">
+							<Label.BindingContext>
+					      		<local:RegisterPageViewModel />
+					    	</Label.BindingContext>
 							<Label.FontFamily>
 							    <OnPlatform x:TypeArguments="x:String">
 							        <OnPlatform.Android>monospace</OnPlatform.Android>
@@ -18,10 +23,26 @@
 							    </OnPlatform>
 							</Label.FontFamily>
 						</Label>
+						<Label Text="{Binding DateTime, StringFormat='{0:T}'}" FontSize="22" 
+								HorizontalOptions="Center" 
+								VerticalOptions="Center">
+							<Label.BindingContext>
+					      		<local:RegisterPageViewModel />
+					    	</Label.BindingContext>
+							<Label.FontFamily>
+							    <OnPlatform x:TypeArguments="x:String">
+							        <OnPlatform.Android>monospace</OnPlatform.Android>
+							        <OnPlatform.iOS>Menlo-Regular</OnPlatform.iOS>
+							    </OnPlatform>
+							</Label.FontFamily>
+					  	</Label>
 					</StackLayout>
-					<StackLayout Grid.Row="2">
-						<Button Text="Register" FontSize="32" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" 
-							Clicked="Register_Clicked"/>
+					<StackLayout Grid.Row="2" Padding="0,10,0,0">
+						<Button Text="  Register  " FontSize="36" 
+								TextColor="White" BackgroundColor="#03A9F4"
+								HorizontalOptions="Center" 
+								VerticalOptions="CenterAndExpand" 
+								Clicked="Register_Clicked"/>
 					</StackLayout>
 				</Grid>
 			</StackLayout>
