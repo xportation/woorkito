@@ -53,6 +53,7 @@
     <Compile Include="App.cs" />
     <Compile Include="TimeRegister.cs" />
     <Compile Include="RegisterPageViewModel.cs" />
+    <Compile Include="WorkDay.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Remotion.Linq">

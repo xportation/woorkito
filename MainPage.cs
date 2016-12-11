@@ -1,8 +1,10 @@
 ﻿using System;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace woorkito
 {
+	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public class MainPage : TabbedPage
 	{
 		public MainPage()
