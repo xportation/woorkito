@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Woorkito", "woorkito.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Woorkito.iOS", "iOS\woorkito.iOS.csproj", "{BB7A4227-FDB1-40F9-9EF4-1C5E5702F97D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Woorkito.Android", "Android\Woorkito.Android.csproj", "{3475C117-C5FE-47C2-8F65-5B54C6FA0F77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
