@@ -4,7 +4,7 @@ using woorkito;
 
 namespace Woorkito.Android
 {
-    [Activity(Label = "Woorkito", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Woorkito", Theme = "@android:style/Theme.Material.Light", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
