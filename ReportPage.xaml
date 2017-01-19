@@ -5,7 +5,22 @@
 		Title="Reports">
 	<ContentPage.Content>
 		<StackLayout>
-			<Label Text="Report Page" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"></Label>
+			<ListView x:Name="listView" RowHeight="80">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<Label Text="{Binding .}" VerticalTextAlignment="Center" FontSize="Medium" HorizontalTextAlignment="Center">
+								<Label.FontFamily>
+									    <OnPlatform x:TypeArguments="x:String">
+									        <OnPlatform.Android>monospace</OnPlatform.Android>
+									        <OnPlatform.iOS>Menlo-Regular</OnPlatform.iOS>
+									    </OnPlatform>
+									</Label.FontFamily>
+							</Label>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
